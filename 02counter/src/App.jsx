@@ -10,16 +10,22 @@ function App() {
   //let counter = 15
 
   const addValue = () => {
-    //counter = counter + 1
-    setCounter(prevCounter => prevCounter + 1)
-    setCounter(prevCounter => prevCounter + 1 )
-    setCounter(prevCounter => prevCounter + 1)
-    setCounter(prevCounter => prevCounter + 1)
-    
+
+    if(counter>=20){
+      alert(" counter value more than 20 not allowed");
+    }
+    else{
+      setCounter(counter+1)
+    }
   }
 
   const removeValue = () => {
-    setCounter(counter - 1)
+    if(counter<=0){
+      alert("Negative counter value not allowed");
+    }
+    else{
+      setCounter(counter-1)
+    }
   }
   
   return (
